@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Http Utility";
+}
+
+<h2>Http Utility</h2>
+
+@{
+    string baslik = "<h2>Http Utility</h2>";
+    string baslikEncode = HttpUtility.HtmlEncode(baslik);
+    string baslikDecode = HttpUtility.HtmlDecode(baslikEncode);
+ }
+
+<h3>Varsayılan: @baslik</h3> <hr />
+<h3>HtmlEncode durumu: @baslikEncode</h3> <hr />
+<h3>HtmlDecode durumu: @baslikDecode</h3>
+
+<h4>Html olarak yazdırma: @Html.Raw(baslikDecode)</h4>
+

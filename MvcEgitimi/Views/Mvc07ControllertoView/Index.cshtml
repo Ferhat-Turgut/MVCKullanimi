@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Controller dan View a Veri Taşıma";
+}
+
+<h2>Controller dan View a Veri Taşıma</h2>
+
+<div>
+    Ürün Kategorisi= @ViewBag.KategoriAdi <br />
+    Ürün Adı= @ViewData["UrunAdi"] <br />
+    @("Ürün Fiyatı=" + string.Format("{0:C}", @TempData["UrunFiyat"]))
+</div>

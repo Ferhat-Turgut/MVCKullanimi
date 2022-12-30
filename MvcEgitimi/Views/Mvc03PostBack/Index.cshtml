@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Mvc Post İşlemi";
+    string postIslemi = "";
+    if (IsPost)
+    {
+        postIslemi = "Post işlemi gerçekleşti.";
+    }
+}
+
+<h2>Mvc Post İşlemi</h2>
+<form method="post">
+    <input id="Text1" type="text" />
+    <input id="Submit1" type="submit" value="Veriyi Sunucuya Gönder" />
+</form>
+<hr />
+
+@postIslemi
+

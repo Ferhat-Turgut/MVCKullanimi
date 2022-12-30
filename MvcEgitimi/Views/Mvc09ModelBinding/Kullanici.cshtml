@@ -1,0 +1,41 @@
+﻿@model MvcEgitimi.Models.Kullanici
+
+@{
+    ViewBag.Title = "Kullanıcı Bilgileri";
+}
+
+<h2>Kullanıcı Bilgileri</h2>
+
+
+@using (Html.BeginForm())
+{
+    @*@Model.Ad <br />
+    @Model.Soyad<br />
+    @Model.Mail<br />
+    @Model.KullaniciAdi<br />
+    @Model.Sifre<br />*@
+    <hr />
+<div>
+    Ad:@Html.EditorFor(model => model.Ad)
+    <hr />
+    Soyad:@Html.EditorFor(model => model.Soyad)
+    <hr />
+    Email:@Html.EditorFor(model => model.Mail)
+    <hr />
+    Kullanıcı Adı:@Html.EditorFor(model => model.KullaniciAdi)
+    <hr />
+    Şifre:@Html.EditorFor(model => model.Sifre)
+    <hr />
+    <input id="Submit1" type="submit" value="Gönder" />
+</div>
+}
+@{
+    @ViewBag.AdSifre
+    <hr />
+    @ViewData["AdSoyad"]
+    <hr />
+    @TempData["Email"]
+ }
+
+
+

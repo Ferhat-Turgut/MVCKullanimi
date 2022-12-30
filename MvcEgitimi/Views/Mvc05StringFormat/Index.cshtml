@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "String format ile formatlama";
+}
+
+<h2>String format ile formatlama</h2>
+@{
+    DateTime tarih = DateTime.Now;
+    @("Ayın günü (dd):"+string.Format("{0:dd}",tarih))
+    <br />
+    @("Haftanın günü (dddd):" + string.Format("{0:dddd}",tarih))
+    <br />
+    @("Ay  (MM):"+string.Format("{0:MM}",tarih))
+    <br />
+    @("Ay (isim olarak)(MMMM):"+string.Format("{0:MMMM}",tarih))
+    <br />
+    @("Yıl (yyyy):"+string.Format("{0:yyyy}",tarih))
+    <hr />
+    @("Saat (hh):"+string.Format("{0:hh}",tarih))
+    <br />
+    @("Dakika (mm):"+string.Format("{0:mm}",tarih))
+    <br />
+    @("Saniye (ss):"+string.Format("{0:ss}",tarih))
+    <hr />
+    @("Kısa Saat (t):"+string.Format("{0:t}",tarih))
+    <br />
+    @("Uzun Saat (T):"+string.Format("{0:T}",tarih))
+    <br />
+    @("Kısa Tarih (d):" + string.Format("{0:d}",tarih))
+    <br />
+    @("Uzun Tarih (D):" + string.Format("{0:D}",tarih))
+    <br />
+    @("Uzun Tarih + Saat (f):" + string.Format("{0:f}",tarih))
+    <br />
+    @("Uzun Tarih + Saat+Saniye (F):" + string.Format("{0:F}",tarih))
+    <br />
+    @("Tarih + Saat+Dakika (g):" + string.Format("{0:g}",tarih))
+    <br />
+    @("Tarih + Saat+Dakika+Saniye (G):" + string.Format("{0:G}",tarih))
+    <br />
+    @("Gün + Ay (m):" + string.Format("{0:m}",tarih))
+    <br />
+    @("Ay+Yıl  (y):" + string.Format("{0:y}",tarih))
+    <br />
+    <hr />
+    <h3>Sayı Formatları</h3>
+    @("{0:C} " + string.Format("{0:C}",10.50))
+    <br />
+    @("{0:D5}:" + string.Format("{0:D5}",15))
+    <br />
+    @("{0:D3}:" + string.Format("{0:D3}",15))
+    <br />
+    @("{0:F1}:" + string.Format("{0:F1}",15.2))
+    <br />
+    @("{0:F3}:" + string.Format("{0:F3}",15.2))
+    <br />
+    @("{0:000000.00}:" + string.Format("{0:000000.00}",15.2))
+    <br />
+    @("{0:N}:" + string.Format("{0:N}",15.2))
+    <br />
+    @("{0:###.##}:" + string.Format("{0:###.##}", 15.2255))
+    <br />
+}
+

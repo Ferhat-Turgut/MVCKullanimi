@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Session ve Cookie Kullanımı";
+}
+
+<h2>Session ve Cookie Kullanımı</h2>
+
+@using (Html.BeginForm())
+{
+    <h4>Session Oluşturma</h4>
+    @Html.TextBox("text", "Sess")
+    <input id="Submit1" type="submit" value="Ekle" />
+
+}
+
+@using (Html.BeginForm("CookieOlustur", "Mvc11SessionCookie"))
+{
+    <h4>Cookie Oluşturma</h4>
+    @Html.TextBox("kuki", "kuki")
+    <input id="Submit1" type="submit" value="Cookie Ekle" />
+
+}
+<hr />
+@ViewBag.kukiDeger
+<hr />
+@using (Html.BeginForm("CookieSil", "Mvc11SessionCookie"))
+{
+    <h4>Cookie Sil</h4>
+    
+    <input id="Submit1" type="submit" value="Cookie Sil" />
+
+}

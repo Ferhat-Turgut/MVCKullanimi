@@ -1,0 +1,48 @@
+﻿@model MvcEgitimi.Models.Products
+
+@{
+    ViewBag.Title = "Ürün Sil";
+}
+
+<h2>Ürün Sil</h2>
+
+<h3>Ürünü silmek istediğinize emin misiniz?</h3>
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunFiyati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunFiyati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StokMiktari)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StokMiktari)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Dön", "Index")
+        </div>
+    }
+</div>

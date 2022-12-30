@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Mvc Dosya Yükleme";
+}
+
+<h2>Mvc Dosya Yükleme</h2>
+<form method="post" enctype="multipart/form-data">
+    <input id="File1" type="file" name="YuklenecekDosya" />
+    <input id="Submit1" type="submit" value="Yükle" />
+</form>
+<hr />
+@ViewData["message"]
+<img src="~/Images/@ViewBag.ResimAdi" alt="" />
+

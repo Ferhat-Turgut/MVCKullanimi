@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "MVC View den Controller a Veri Gönderme";
+    SelectListItem[] liste = new SelectListItem[3]
+            {
+               new SelectListItem() {Text="Bilgisayar"},
+               new SelectListItem() {Text="Monitör"},
+               new SelectListItem() {Text="Tablet"}
+                    };
+}
+
+<h2>MVC View den Controller a Veri Gönderme</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.TextBox("txt1"); <br />
+        @Html.DropDownList("ddliste", liste); <br />
+        @Html.CheckBox("cbOnay")@("Onaylıyorum"); <br />
+        <input id="Submit1" type="submit" value="Gönder" />
+    }
+</div>
+@{
+    if (IsPost)
+    {
+        @ViewBag.mesaj
+        <hr />
+        @ViewData["ddlistesi"]
+        <hr />
+        @TempData["OnayDurumu"]
+    }
+
+}

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "HTML Helpers";
+}
+
+<h2>HTML Helpers</h2>
+@Html.ActionLink("Anasayfa", "Index")
+<!--3.parametre olarak controller ismi verilmezse varsayılan olarak bulunduğu controllerı kabul eder.-->
+<br />
+
+@Html.ActionLink("Hakkımızda", "About", "Home")
+<!--Varsayılan dışında controller da sayfa çağırmak için 3. parametre olarak controller name girilir.-->
+<hr />
+
+@Html.CheckBox("cbOnay",true)Onaylıyorum
+<!--1.parametre checkbox name 2. parametre varsayılan check durumu.-->
+<hr />
+
+@Html.Editor("txtAd")
+<hr />
+
+@Html.Hidden("hfHiddenElement","deger")
+<hr />
+
+@Html.Label("lblAd","Ürün Adı:")
+<hr />
+
+@Html.TextArea("txtAdres","İstanbul")
+<hr />
+
+@Html.TextBox("txtSoyad","Soyadınız:")
+<hr />
+
+@Html.Password("txtSifre")
